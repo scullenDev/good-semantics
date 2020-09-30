@@ -52,10 +52,6 @@ h2 {
   font-size: 1.75rem;
 }
 
-a:hover {
-  color: darkblue;
-}
-
 section {
   border-top: 1px solid lightgray;
   padding-bottom: 0.5rem;
@@ -115,13 +111,23 @@ nav ul {
   padding: 1rem 0 1rem 7.5rem;
 }
 
-nav ul a {
+nav ul a,
+nav ul a:visited {
   color: white;
   font-weight: 700;
 }
 
 li {
   padding: 0 1rem;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover,
+nav ul a:hover {
+  color: darkblue;
 }
 
 #contactInfo ul {
