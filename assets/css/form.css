@@ -1,0 +1,82 @@
+body {
+  color: #333;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 65%;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+section {
+  border: 3px dotted #ccc;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px 30px 30px;
+}
+
+fieldset {
+  border-color: #ededed;
+}
+
+legend,
+fieldset div {
+  padding-bottom: 5px;
+}
+
+label,
+legend {
+  font-weight: 700;
+}
+
+legend {
+  padding: 0 10px;
+}
+
+select,
+.block label,
+input[type='text'] {
+  display: block;
+  width: 500px;
+}
+
+input[type='text'] {
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+select {
+  font-size: 16px;
+  padding: 5px;
+}
+
+button,
+input[type='submit'],
+input[type='button'] {
+  background-color: #4caf50; /* Green */
+  border: none;
+  border-radius: 1px;
+  color: white;
+  cursor: pointer;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover,
+input[type='submit']:hover,
+input[type='button']:hover {
+  background: darkgreen;
+}
+
+li {
+  padding: 5px 0;
+}

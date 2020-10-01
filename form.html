@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Accessiblity Demo</title>
+    <link rel="stylesheet" href="assets/css/form.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Form Accessibility Demo</h1>
+      <section>
+        <h2>Explicitly associating a label with an input:</h2>
+        <form class="block">
+          <!-- note the use of the 'for' attribute, and how its value is identical to the corresponding input's id attribute -->
+          <label for="firstName">First Name:</label>
+          <input id="firstName" type="text" placeholder="First Name" />
+        </form>
+      </section>
+      <section>
+        <h2>Wrapping a label around its corresponding input:</h2>
+        <form class="block">
+          <!-- no need for a 'for' attribute since the label wraps directly around its corresponding input -->
+          <label>
+            Last Name:
+            <input id="lastName" type="text" placeholder="Last Name" />
+          </label>
+        </form>
+      </section>
+      <section>
+        <h2>Labeling buttons:</h2>
+        <!-- in the case of a regular button, the label is simply the text between the opening and closing tags... this content can be either plain text or nested HTML -->
+        <button type="submit">Submit</button>
+        <button type="button">Cancel</button>
+
+        <!-- in the case of a button used as an input, the 'value' attribute stores the label  -->
+        <input type="submit" value="Submit" />
+        <input type="button" value="Cancel" />
+      </section>
+      <section>
+        <h2>
+          Grouping radio buttons, checkboxes, or related inputs with a fieldset, and providing context using a legend:
+        </h2>
+        <fieldset>
+          <legend>Preferred contact method:</legend>
+          <div>
+            <input type="radio" name="contactMethod" id="email" value="email" checked />
+            <label for="email">Email</label>
+          </div>
+          <div>
+            <input type="radio" name="contactMethod" id="phone" value="phone" />
+            <label for="phone">Phone Call</label>
+          </div>
+          <div>
+            <input type="radio" name="contactMethod" id="textMessage" value="textMessage" />
+            <label for="textMessage">Text Message</label>
+          </div>
+        </fieldset>
+      </section>
+      <section>
+        <h2>Grouping related options in a select menu using optgroup:</h2>
+        <select>
+          <option value="" selected="selected" disabled>Choose an animal</option>
+          <optgroup label="Pet">
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="parrot">Parrot</option>
+          </optgroup>
+          <optgroup label="Wild Animal">
+            <option value="dingo">Dingo</option>
+            <option value="tiger">Tiger</option>
+            <option value="giraffe">Giraffe</option>
+            <option value="elephant">Elephant</option>
+          </optgroup>
+        </select>
+      </section>
+      <section>
+        <h2>General form accessibility recommendations:</h2>
+        <ul>
+          <li>Make sure your label text is simple but adequately descriptive.</li>
+          <li>
+            Put any general form instructional text <strong>before</strong> the form element. Some screen readers switch
+            over to 'Forms Mode' which may prevent instructions like these from being read aloud.
+          </li>
+          <li>
+            Consider including simple instructions for individual fields inside of that field's label (like 'Required'
+            or 'MM/YY/DD'.)
+          </li>
+          <li>
+            Input placeholder text is not a valid replacement for a label, as placeholder text is ignored by some screen
+            readers.
+          </li>
+          <li>
+            Never use a color change as the sole visual indication of an error, as users with colorblindness or poor
+            vision may be roadblocked and left confused.
+          </li>
+          <li>Provide helpful error messages placed near their corresponding input, to assist screen reader users.</li>
+          <li>Don't hide button or input focus indicators using CSS.</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
