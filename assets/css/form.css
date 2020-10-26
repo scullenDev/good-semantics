@@ -30,7 +30,8 @@ fieldset div {
 }
 
 label,
-legend {
+legend,
+.label {
   font-weight: 700;
 }
 

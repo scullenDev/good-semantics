@@ -10,11 +10,19 @@
     <div class="wrapper">
       <h1>Form Accessibility Demo</h1>
       <section>
+        <h2>No properly-associated label:</h2>
+        <form class="block">
+          <!-- note the lack of a label element -->
+          <span class="label">First Name:</span>
+          <input id="firstName" type="text" placeholder="First Name" />
+        </form>
+      </section>
+      <section>
         <h2>Explicitly associating a label with an input:</h2>
         <form class="block">
           <!-- note the use of the 'for' attribute, and how its value is identical to the corresponding input's id attribute -->
-          <label for="firstName">First Name:</label>
-          <input id="firstName" type="text" placeholder="First Name" />
+          <label for="middleName">Middle Name:</label>
+          <input id="middleName" type="text" placeholder="Middle Name" />
         </form>
       </section>
       <section>
